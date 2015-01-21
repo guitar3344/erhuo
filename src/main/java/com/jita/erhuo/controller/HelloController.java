@@ -14,12 +14,6 @@ public class HelloController {
     @Autowired
     UserService userService;
 
-	@RequestMapping(method = RequestMethod.GET)
-	public String printWelcome(ModelMap model) {
-		model.addAttribute("message", "Hello world!");
-		return "hello";
-	}
-
     @RequestMapping(value = "hello.do",method = RequestMethod.GET)
     public String hello(ModelMap model) {
         User user = userService.findUserById(1L);
