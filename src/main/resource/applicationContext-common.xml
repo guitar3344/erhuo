@@ -45,6 +45,18 @@
         <property name="configLocation" value="classpath:mybatis.xml"/>
         <!-- mapper和resultmap配置路径 -->
         <property name="mapperLocations" value="classpath*:com/jita/erhuo/mapper/**/*.xml" />
+        <property name="plugins">
+            <array>
+                <bean class="com.github.pagehelper.PageHelper">
+                    <property name="properties">
+                        <value>
+                            dialect=mysql
+                            reasonable=true
+                        </value>
+                    </property>
+                </bean>
+            </array>
+        </property>
     </bean>
 
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">

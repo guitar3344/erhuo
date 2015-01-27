@@ -10,13 +10,18 @@
         http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
 
+    <mvc:annotation-driven/>
     <context:component-scan base-package="com.jita.erhuo.controller"/>
 
-    <mvc:annotation-driven/>
+    <mvc:resources mapping="/image/**" location="/image/"/>
+    <mvc:resources mapping="/javascript/*" location="/javascript/"/>
+    <mvc:resources mapping="/style/**" location="/style/"/>
 
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/pages/"/>
-        <property name="suffix" value=".jsp"/>
+    <bean id="viewResolver"
+          class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+        <!--<property name="order" value="5" />-->
+        <property name="suffix" value=".ftl" />
+        <property name="contentType" value="text/html;charset=UTF-8" />
     </bean>
 
 </beans>

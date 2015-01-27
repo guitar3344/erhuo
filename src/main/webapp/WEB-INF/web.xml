@@ -8,7 +8,7 @@
     <!-- 设置Spring容器加载配置文件路径 -->
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>classpath*:applicationContext.xml</param-value>
+        <param-value>classpath*:applicationContext-*.xml</param-value>
     </context-param>
 
     <!-- 加载Spring容器配置 -->
@@ -38,7 +38,7 @@
 
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
-        <url-pattern>*.do</url-pattern>
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
 
     <filter>
