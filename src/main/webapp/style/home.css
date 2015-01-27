@@ -1,0 +1,183 @@
+body {
+    background: none repeat scroll 0 0 #efefef;
+    color: #111;
+}
+
+.eh_wrapper{
+    width: 950px;
+    margin: 0 auto;
+}
+
+.eh_nav_bar{
+    width: 100%;
+    min-width: 950px;
+    background: none repeat scroll 0 0 #f7f8ed;
+    border-bottom: 1px solid #d3cdca;
+    position: relative;
+    margin-bottom: 20px;
+}
+.eh_nav_bar .eh_nav{
+    height: 60px;
+    line-height: 60px;
+    overflow: visible;
+    padding: 0;
+}
+.eh_nav_bar .eh_nav .nav_logo{
+}
+.eh_nav_bar .eh_nav .nav_items .nav_item{
+    display: inline-block;
+    margin-right: 15px;
+    position: relative;
+    vertical-align: middle;
+}
+
+.eh_nav_bar .eh_nav .nav_items .nav_item .nav_link {
+    border-bottom: 3px solid transparent;
+    display: block;
+    font-size: 16px;
+    line-height: 53px;
+    padding-top: 4px;
+    text-align: center;
+    /*width: 60px;*/
+}
+.eh_nav_bar .eh_nav .nav_user{
+}
+
+.eh_category{
+    margin-bottom: 30px;
+    overflow: visible;
+    background: none repeat scroll 0 0 #fff;
+    border-radius: 4px;
+    border: 1px solid #dfdfdf;
+    box-shadow: 0 1px 2px 0 rgba(158, 158, 158, 0.2);
+    /*min-height: 150px;*/
+    padding: 10px 0;
+    height: 110px;
+}
+.eh_category .primary_category{
+    border-right: 2px dashed #dfdfdf;
+    float: left;
+    padding: 5px 20px;
+    width: 320px;
+}
+.eh_category .primary_category .cat_item{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.eh_category .primary_category .cat_item a{
+    border-radius: 3px;
+    display: inline-block;
+    height: 28px;
+    line-height: 28px;
+    margin: 0;
+    padding: 0 8px;
+    text-align: center;
+    width: 80px;
+}
+.eh_category .primary_category .cat_item a{
+    border: 1px solid #f9cd62;
+    color: #666;
+}
+.eh_category .primary_category .cat_item a:hover{
+    border: 1px solid #ff9860;
+    color: #fefbea;
+    background: none repeat scroll 0 0 #ff9860;
+}
+.eh_category .primary_category .cat_item.active a{
+    border: 1px solid #ff9860;
+    color: #fefbea;
+    background: none repeat scroll 0 0 #ff9860;
+}
+
+.eh_category .secondary_category{
+    margin-left: 360px;
+    padding: 30px 0 30px 20px;
+}
+.eh_category .secondary_category .cat_item{
+    display: inline-block;
+    margin: 0 30px 10px 0;
+}
+.eh_category .secondary_category .cat_item a{
+    border-radius: 3px;
+    color: #666;
+    padding: 6px 8px;
+}
+.eh_category .secondary_category .cat_item.active a {
+    background-color: #ff9860;
+    border-color: #ff9860 !important;
+    color: #fefbea;
+}
+
+/*商品展示*/
+.eh_content .goods_items{
+    overflow: hidden;
+    width: 972px;
+}
+
+.eh_content .goods_item{
+    display: inline-block;
+    margin: 0 15px 10px 0;
+}
+.eh_content .goods_item .goods_card{
+    overflow: visible;
+    width: 464px;
+    background: none repeat scroll 0 0 #fff;
+    border-radius: 4px;
+    border: 1px solid #dfdfdf;
+    box-shadow: 0 1px 2px 0 rgba(158, 158, 158, 0.2);
+}
+.eh_content .goods_item .goods_card .card_left{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+.eh_content .goods_item .goods_card .card_left .goods_price{
+    background: none repeat scroll 0 0 rgba(185, 185, 185, 0.65);
+    bottom: 0;
+    color: #fff;
+    display: block;
+    font-size: 13px;
+    padding: 8px 6px;
+    position: absolute;
+    right: 0;
+}
+
+.eh_content .goods_item .goods_card .card_right{
+    height: 180px;
+    margin-left: 200px;
+    padding: 10px;
+    position: relative;
+}
+
+.eh_content .goods_item .goods_card .card_right .goods_title{
+    margin-bottom: 10px;
+}
+.eh_content .goods_item .goods_card .card_right .goods_time{
+    font-size: 12px;
+    margin-bottom: 30px;
+    color: #c6c6c6;
+}
+.eh_content .goods_item .goods_card .card_right .goods_description{
+    font-size: 12px;
+    height: 48px;
+    line-height: 16px;
+    margin-bottom: 40px;
+}
+.eh_content .goods_item .goods_card .card_right .goods_other{
+    bottom: 5px;
+    font-size: 12px;
+    height: 22px;
+    line-height: 22px;
+    position: absolute;
+}
+.eh_content .goods_item .goods_card .card_right .goods_other .goods_place{
+    margin-right: 100px;
+}
+.eh_content .goods_item .goods_card .card_right .goods_other .goods_redHeart{
+    color: #c6c6c6;
+    margin-right: 10px;
+}
+.eh_content .goods_item .goods_card .card_right .goods_other .goods_comment{
+    color: #c6c6c6;
+}

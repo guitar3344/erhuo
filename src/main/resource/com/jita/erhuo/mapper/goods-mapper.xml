@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
+        'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
+
+<mapper namespace='com.jita.erhuo.mapper.GoodsMapper'>
+
+    <!-- Instead of referencing Fully Qualified Class Names we can register Aliases in mybatis-config.xml and use Alias names. -->
+    <resultMap type='Goods' id='GoodsResult'>
+        <id property='id' column='id'/>
+        <result property='title' column='title'/>
+        <result property='description' column='description'/>
+        <result property='originalPrice' column='original_price'/>
+        <result property='price' column='price'/>
+        <result property='canBargain' column='can_bargain'/>
+        <result property='categoryCode' column='category_code'/>
+        <result property='tradePlace' column='trade_place'/>
+        <result property='primaryPicture' column='primary_picture'/>
+        <result property='creatorId' column='creator_id'/>
+        <result property='status' column='status' typeHandler="com.jita.erhuo.util.typeHandler.GenericEnumCodeHandler"/>
+        <result property='createTime' column='create_time'/>
+    </resultMap>
+
+    <select id='getGoodsByCategory' resultMap='GoodsResult'>
+        SELECT
+        id,
+        title,
+        description,
+        original_price,
+        price,
+        can_bargain,
+        category_code,
+        trade_place,
+        primary_picture,
+        creator_id,
+        status,
+        create_time
+        FROM goods
+        WHERE category_code like #{param1}"%"
+        ORDER BY ${param2} ${param3}
+    </select>
+
+</mapper>
