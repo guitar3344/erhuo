@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <#include "/WEB-INF/pages/common_meta&title.ftl">
-    <#include "/WEB-INF/pages/common_css&script.ftl">
+    <#include common_header.ftl>
 </head>
 <body>
     <form id="login_form" name="login_form" action="/login.do">

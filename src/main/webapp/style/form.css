@@ -1,0 +1,222 @@
+.eh_form{
+    border: 1px solid #dfdfdf;
+    box-shadow: 0 1px 2px 0 rgba(158, 158, 158, 0.2);
+    overflow: visible;
+    background: none repeat scroll 0 0 #fff;
+}
+.eh_form_title{
+    background-color: #f6f6f6;
+    border-bottom: 1px solid #dfdfdf;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+.eh_form_title h2{
+
+}
+.eh_form_item{
+    /*height: 40px;*/
+    margin-bottom: 20px;
+    width: 100%;
+}
+.eh_form_item .eh_form_label{
+    display: inline-block;
+    float: left;
+    line-height: 34px;
+    text-align: right;
+    width: 20%;
+}
+.eh_form_item .eh_form_value{
+    margin-left: 30px;
+    display: inline-block;
+    width: 40%;
+    position: relative;
+}
+
+.eh_form_item .eh_form_value.m{
+    width: 18.2%;
+}
+
+#secondCategory{
+    display: none;
+}
+
+.eh_form_item .eh_form_value .eh_form_dropMenu{
+    background-clip: padding-box;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+    display: none;
+    float: left;
+    font-size: 14px;
+    left: 0;
+    list-style: outside none none;
+    margin: 2px 0 0;
+    min-width: 160px;
+    width: 100%;
+    padding: 5px 0px;
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    z-index: 1000;
+}
+
+.eh_form_item .eh_form_value .eh_form_dropMenu > li > a {
+    clear: both;
+    color: #333;
+    display: block;
+    font-weight: 400;
+    line-height: 1.42857;
+    padding: 3px 20px;
+    white-space: nowrap;
+}
+.eh_form_item .eh_form_value .eh_form_dropMenu > li > a:hover {
+    background-color: #f5f5f5;
+    color: #262626;
+}
+
+.eh_input_wr{
+    background-color: rgb(246, 249, 249);
+    border: 1px solid #f9cd62;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 2px 7px;
+    position: relative;
+}
+.eh_input_wr input{
+    border: medium none;
+    background-color: transparent;
+    color: #444;
+    font-size: 14px;
+    height: 24px;
+    line-height: 24px;
+    vertical-align: middle;
+    width: 100%;
+}
+.eh_input_wr textarea{
+    border: medium none;
+    background-color: transparent;
+    font-size: 14px;
+    resize: none;
+    width: 100%;
+}
+#goods_desc{
+    height: 68px;
+}
+.goods_price .eh_input_wr:after {
+    color: #858e8f;
+    content: "元";
+    display: block;
+    float: left;
+    font-size: 14px;
+    right: 0;
+    bottom: 0;
+    line-height: 24px;
+    position: absolute;
+    text-align: center;
+    vertical-align: middle;
+    width: 30px;
+}
+.goods_price .eh_input_wr input {
+    padding-right: 30px;
+}
+.goods_price .original_price:before {
+    color: #858e8f;
+    content: "原价";
+    display: block;
+    float: left;
+    font-size: 14px;
+    left: 0;
+    bottom: 0;
+    line-height: 24px;
+    position: absolute;
+    text-align: center;
+    vertical-align: middle;
+    width: 35px;
+}
+.goods_price .original_price input{
+    padding-left: 35px;
+}
+
+.goods_category .eh_input_wr span {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+}
+
+/*proto.io switch*/
+.onoffswitch {
+    position: relative; width: 90px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 1px solid #F9CD62; border-radius: 20px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    -moz-transition: margin 0.3s ease-in 0s; -webkit-transition: margin 0.3s ease-in 0s;
+    -o-transition: margin 0.3s ease-in 0s; transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "接受";
+    padding-left: 10px;
+    background-color: #34A7C1; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "拒绝";
+    padding-right: 10px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 21px; margin: 4.5px;
+    background: #FFFFFF;
+    border: 2px solid #F9CD62; border-radius: 20px;
+    position: absolute; top: 0; bottom: 0; right: 56px;
+    -moz-transition: all 0.3s ease-in 0s; -webkit-transition: all 0.3s ease-in 0s;
+    -o-transition: all 0.3s ease-in 0s; transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px;
+}
+
+/*uploadPic*/
+.eh_upload {
+    border: 1px solid #f9cd62;
+    height: 110px;
+    margin: 0 0 5px;
+    padding: 4px;
+    position: relative;
+    white-space: nowrap;
+    width: 110px;
+}
+.eh_upload .eh_upload_inner {
+    background-color: #f4f4f4;
+    height: 110px;
+    width: 110px;
+}
+.eh_upload .eh_upload_inner b{
+    background-position: -69px -20px;
+    height: 54px;
+    left: 21px;
+    position: absolute;
+    top: 32px;
+    width: 66px;
+}

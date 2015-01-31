@@ -1,27 +1,11 @@
 <html>
 <head>
-<#include "common_meta&title.ftl">
-<#include "common_css&script.ftl">
+<#include 'common_header.ftl'>
+    <link rel="stylesheet" href="/style/global.css">
     <link rel="stylesheet" href="/style/home.css">
 </head>
 <body>
-<div class="eh_nav_bar">
-    <div class="eh_nav eh_wrapper">
-        <div class="nav_logo"></div>
-        <div class="nav_items">
-            <ul>
-                <li class="nav_item">
-                    <a class="nav_link" href="">首页</a>
-                </li>
-                <li class="nav_item">
-                    <a class="nav_link" href="">精品推荐</a>
-                </li>
-                <li class="nav_item"></li>
-            </ul>
-        </div>
-        <div class="nav_user"></div>
-    </div>
-</div>
+<#include 'nav.ftl'>
 <div class="eh_category eh_wrapper">
     <div class="primary_category">
         <ul>

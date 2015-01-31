@@ -12,4 +12,5 @@ import java.util.List;
 public interface DictCategoryMapper {
     public List<DictCategory> getAllRootCategories();
     public List<DictCategory> getCategoriesByParentId(Long id);
+    public List<DictCategory> getAllChildren();
 }

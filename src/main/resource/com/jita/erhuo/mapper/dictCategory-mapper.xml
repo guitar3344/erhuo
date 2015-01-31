@@ -32,4 +32,14 @@
         where parent_id is null
     </select>
 
+    <select id='getAllChildren' resultMap='CategoryResult'>
+        SELECT
+        id,
+        code,
+        name,
+        parent_id
+        FROM dict_category
+        where parent_id is not null
+    </select>
+
 </mapper>
