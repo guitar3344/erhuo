@@ -1,15 +1,61 @@
 <html>
 <head>
     <#include 'common_header.ftl'>
+    <link rel="stylesheet" href="/style/awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/style/global.css">
     <link rel="stylesheet" href="/style/home.css">
     <link rel="stylesheet" href="/style/form.css">
     <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
-    <script src="/javascript/category-cascade-select.js"></script>
+    <!--引入CSS-->
+    <link rel="stylesheet" type="text/css" href="/plugin/webuploader/webuploader.css">
+    <!--引入JS-->
+    <script type="text/javascript" src="/plugin/webuploader/webuploader.js"></script>
+    <script src="/javascript/form/category-cascade-select.js"></script>
+    <script src="/javascript/upload-picture.js"></script>
     <script>
+        $.fn.serializeObject = function()
+        {
+            var o = {};
+            var a = this.serializeArray();
+            $.each(a, function() {
+                if (o[this.name] !== undefined) {
+                    if (!o[this.name].push) {
+                        o[this.name] = [o[this.name]];
+                    }
+                    o[this.name].push(this.value || '');
+                } else {
+                    o[this.name] = this.value || '';
+                }
+            });
+            return o;
+        };
+
         $(function(){
             var categoryCascadeSelect = new CategoryCascadeSelect();
             categoryCascadeSelect.init();
+
+            uploadPicture();
+
+            $("#releaseGoods").click(function(){
+//                var param = {
+//                    title:$("#goods_title").val(),
+//                    description:$("#goods_desc").val()
+//                }
+
+                $.ajax({
+                    type: "POST",
+                    url:"/goods/",
+                    dataType: 'json',
+                    contentType: 'application/json;charset=utf-8',
+                    data:JSON.stringify($('#goodsForm').serializeObject()),// 要提交的表单
+//                    data:JSON.stringify(param),
+                    success: function(res) {
+                        if(res.status == 'success'){
+                            alert("发布成功")
+                        }
+                    }
+                });
+            });
         })
     </script>
 </head>
@@ -19,7 +65,7 @@
     <div class="eh_form_title">
         <h2>发布商品</h2>
     </div>
-    <form>
+    <form id="goodsForm">
         <div class="eh_form_item goods_title">
             <div class="eh_form_label"><label>标题</label></div>
             <div class="eh_form_value">
@@ -85,7 +131,7 @@
             <div class="eh_form_label"><label>可议价</label></div>
             <div class="eh_form_value m">
                 <div class="onoffswitch">
-                    <input type="checkbox" class="onoffswitch-checkbox" id="goods_canBargain" name="canBargain" checked>
+                    <input type="checkbox" class="onoffswitch-checkbox" id="goods_canBargain" name="canBargain" value="true" checked>
                     <label class="onoffswitch-label" for="goods_canBargain">
                         <span class="onoffswitch-inner"></span>
                         <span class="onoffswitch-switch"></span>
@@ -106,14 +152,23 @@
         <div class="eh_form_item goods_pic">
             <div class="eh_form_label"><label>二货图片</label></div>
             <div class="eh_form_value">
+                <div id="picList" class="eh_pic_list"></div>
                 <div class="eh_upload">
-                    <div class="eh_upload_inner">
+                    <div class="eh_upload_inner" id="filePicker">
+                        <i class="icon-picture"></i>
                         <b>添加图片</b>
                     </div>
                 </div>
                 <#--<div class="eh_input_wr">-->
                     <#--<input class="eh_text" id="goods_tradePlace" name="tradePlace">-->
                 <#--</div>-->
+            </div>
+            <input type="hidden" id="goods_pic" name="goodsPics">
+        </div>
+
+        <div class="eh_form_item">
+            <div class="eh_form_button_group">
+                <button type="button" id="releaseGoods">发布</button>
             </div>
         </div>
     </form>

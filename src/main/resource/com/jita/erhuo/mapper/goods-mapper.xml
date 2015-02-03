@@ -39,4 +39,9 @@
         ORDER BY ${param2} ${param3}
     </select>
 
+    <insert id='save' parameterType='Goods' useGeneratedKeys='true' keyProperty='id'>
+        INSERT INTO goods(title, description, original_price, price, can_bargain, category_code,trade_place,primary_picture,creator_id,status,create_time)
+        VALUES(#{title}, #{description}, #{originalPrice}, #{price},#{canBargain},#{categoryCode},#{tradePlace},#{primaryPicture},#{creatorId},#{status.code},#{createTime})
+    </insert>
+
 </mapper>

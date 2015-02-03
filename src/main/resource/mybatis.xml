@@ -9,6 +9,7 @@
         <typeAlias alias="User" type="com.jita.erhuo.entity.User" />
         <typeAlias alias="DictCategory" type="com.jita.erhuo.entity.dict.DictCategory" />
         <typeAlias alias="Goods" type="com.jita.erhuo.entity.Goods" />
+        <typeAlias alias="GoodsPicture" type="com.jita.erhuo.entity.GoodsPicture" />
     </typeAliases>
 
 </configuration>

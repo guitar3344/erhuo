@@ -1,6 +1,7 @@
 <html>
 <head>
 <#include 'common_header.ftl'>
+    <link rel="stylesheet" href="/style/awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/style/global.css">
     <link rel="stylesheet" href="/style/home.css">
 </head>
@@ -47,7 +48,7 @@
                         <div class="goods_description">${card.description}</div>
                         <div class="goods_other">
                             <span class="goods_place">${card.tradePlace}</span>
-                            <span class="goods_redHeart">喜欢 19</span>
+                            <span class="goods_redHeart"><i class="icon-heart"></i> 19</span>
                             <span class="goods_comment">评论 2</span>
                         </div>
                     </div>

@@ -14,8 +14,9 @@
     <context:component-scan base-package="com.jita.erhuo.controller"/>
 
     <mvc:resources mapping="/image/**" location="/image/"/>
-    <mvc:resources mapping="/javascript/*" location="/javascript/"/>
+    <mvc:resources mapping="/javascript/**" location="/javascript/"/>
     <mvc:resources mapping="/style/**" location="/style/"/>
+    <mvc:resources mapping="/plugin/**" location="/plugin/"/>
 
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">

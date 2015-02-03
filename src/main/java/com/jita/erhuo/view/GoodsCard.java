@@ -1,5 +1,6 @@
 package com.jita.erhuo.view;
 
+import com.jita.erhuo.common.enums.PictureSize;
 import com.jita.erhuo.entity.Goods;
 import com.jita.erhuo.exceptions.DateFormatException;
 import com.jita.erhuo.util.DateUtil;
@@ -32,7 +33,7 @@ public class GoodsCard {
         card.setCategoryCode(goods.getCategoryCode());
         card.setTradePlace(goods.getTradePlace());
         String primaryPic = goods.getPrimaryPicture();
-        card.setPicUrl("/image/"+primaryPic.substring(0,8)+"/"+primaryPic);
+        card.setPicUrl("/picture/goods/"+ PictureSize.M.getCode()+"/"+primaryPic);
         try {
             card.setReleaseTime(DateUtil.getFormatIntervalBeforeNow(goods.getCreateTime())+"发布");
         } catch (DateFormatException e) {

@@ -11,4 +11,6 @@ import java.util.List;
 @Component
 public interface GoodsMapper {
     public List<Goods> getGoodsByCategory(String categoryCode,String order,String dir);
+
+    public int save(Goods goods);
 }

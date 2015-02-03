@@ -211,12 +211,56 @@
     background-color: #f4f4f4;
     height: 110px;
     width: 110px;
+    cursor: pointer;
 }
 .eh_upload .eh_upload_inner b{
-    background-position: -69px -20px;
-    height: 54px;
-    left: 21px;
+    color: #999;
+    left: 28px;
     position: absolute;
-    top: 32px;
-    width: 66px;
+    top: 75px;
+}
+.eh_upload .eh_upload_inner i{
+    color: #999;
+    font-size: 50px;
+    left: 30px;
+    position: absolute;
+    top: 20px;
+}
+
+.eh_pic_list .eh_pic_item{
+    display: inline-block;
+    padding: 5px;
+    position: relative;
+}
+.progress .progress-bar{
+
+}
+.progress.active .progress-bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: yellow;
+    height: 20px;
+}
+
+.eh_form_button_group{
+    margin-left: 20%;
+}
+.eh_form_button_group button{
+    background-color: #337ab7;
+    color: #fff;
+    -moz-user-select: none;
+    background-image: none;
+    border: 1px solid #2e6da4;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857;
+    margin-left: 30px;
+    padding: 6px 12px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
 }
